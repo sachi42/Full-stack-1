@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+      <title>Practical-3</title>
+</head> 
+<body>
+      <p>Practical-3:Create a web page showing a basic html structure using character Entities and span Tag.</p>
+      <h1>Output</h1>
+      <plaintext>
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+             <title>Document</title>
+       </head>
+       <body>
+       <!-- this is html comment -->
+       Write your content here......
+       </body>
+       </html>     
