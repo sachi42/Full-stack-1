@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>Practical-8</title>
+        <style>
+            * {
+                 margin: 0;
+                 padding: 0;
+              }
+            .header{
+                display: flex;
+                color: white;
+                font-size: 40;
+                padding: 15px 10px;
+                margin-bottom: 20px;
+                position: sticky;
+                top:0;
+                justify-content: center;
+                align-items: center;
+                background-color: grey;
+            }
+            .nav-bar li{
+                display:inline;
+                margin: 30px;
+                padding: 0; 
+            }
+            .nav-bar li a{
+                color: white;
+                text-decoration: none;
+                height: 100%;
+                padding:10px 10px;
+                font-weight: bolder;
+            }
+            .nav-bar li a :hover{
+                background-color: white;
+                color: black;
+            }
+            .banner{
+                background-image: url(../images/8th-practical/banner.jpg);
+                background-repeat: no-repeat;
+                width: 98vw;
+                display: flex;
+                background-size: cover;
+                height: 100vh;
+                margin: 10px auto;
+            }
+            .banner-item{
+                width: 98vh;
+                margin: 0.5em;
+                padding: 1em;
+                color: white;
+            }
+            .banner-item h1{
+                font-size: 60px;
+            }
+            .box-title{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                font-weight: 900;
+                margin: 50px 15px 20px 15px;
+                padding: 2px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .section-1{
+                justify-content: center;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+            .section-1 div{
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;
+                display: inline-block;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 50px;
+            }
+            #team-member1 {
+                 background-image: url(../images/8th-practical/1.png);
+                 background-position: center;
+             }
+            #team-member2{
+                background-image: url(../images/8th-practical/2.png);
+                 background-position: center;
+            }
+            #team-member3 {
+                 background-image: url(../images/8th-practical/3.png);
+                 background-position: center;
+            }
+            #team-member4 {
+                background-image: url(../images/8th-practical/9.png);
+                background-position: center;
+            }
+            .section-2 {
+                 display: flex;
+                 flex-direction: row;
+                 height: 80vh;
+                 margin-top: 20px;
+                 margin-bottom: 10px;
+                 width: 98vw;
+               }
+            .section-2:after {
+                 content: '';
+                 display: block;
+                 clear: both;
+            }
+            .leftside {
+                background-color: rgb(51, 27, 24);
+                color: white;
+                font-size: 25px;
+                margin: 5px;
+                padding: 15px;
+                overflow: hidden;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                height: 72vh;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .rightside {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                height: 76vh;
+                margin: 0px;
+            }
+            .rightside #column1 {
+                margin: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url(../images/8th-practical/p1.jpg);
+                color: rgb(54, 6, 226);
+                height: 50vh;
+                border-radius: 2px;
+                border: 1px solid black
+            }
+            .rightside #column2 {
+                margin: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url(../images/8th-practical/p2.jpeg);
+                color: rgb(54, 6, 226);
+                height: 50vh;
+                border-radius: 2px;
+                border: 1px solid black
+            }
+            .rightside #column3 {
+                margin: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url(../images/8th-practical/p3.jpg);
+                color: rgb(54, 6, 226);
+                height: 50vh;
+                border-radius: 2px;
+                border: 1px solid black
+            }   
+            .rightside #column1:hover {
+                box-shadow: 5px 5px 5px 5px grey;
+            }
+            .rightside #column2:hover {
+                box-shadow: 5px 5px 5px 5px grey;
+            }
+            .rightside #column3:hover {
+                box-shadow: 5px 5px 5px 5px grey;
+            }
+            .section-3 {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .section-3:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .box {
+                float: left;
+                width: 21%;
+                height: auto;
+                border: solid white 8px;
+                align-content: center;
+                background-color: white;
+                border-radius: 10px;
+                text-align: center;
+                margin: 30px;
+                padding-bottom: 20px;
+                background-color: rgb(175, 173, 173);
+                border: 20px;
+            }
+            .box a {
+                text-decoration: none;
+                background-color: red;
+                padding: 10px 100px 10px 100px;
+                border-radius: 10px;
+                color: white;
+                text-align: center;
+            }
+            .box a:hover {
+                background-color: blue;
+                text-decoration: solid;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .box a :visited {
+                background-color: violet;
+            }
+            .box h3 {
+                color: blue;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+            }
+            .box p {
+                width: 90%;
+                height: auto;
+                border-radius: 20px;
+                padding: 0px 10px 0px 10px;
+                margin-right: auto;
+                margin-left: auto;
+                overflow: hidden;
+                color: white;
+            }
+            .box img {
+                 width: 95%;
+                 height: 200px;
+                 border-radius: 20px;
+                padding: 5px 5px 0px 5px;
+                margin: 5px auto 0px auto;
+            }
+            .footer {
+                background-color: orchid;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-right: auto;
+                margin-left: auto;
+                font-size: 15px;
+                color: white;
+            }
+            .footer a {
+                color: blue;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: bolder;
+            }
+            .footer a:hover {
+                color: greenyellow;
+                animation: 2s;
+                -webkit-animation: 2s;
+                text-decoration: solid underline;
+            }
+    </style>    
+    </head> 
+    <body class="bg" background-colour="gainsboro">
+        <div class="header" id="Top">
+            <ul class="nav-bar">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About us">About</a></li>
+                <li><a href="#Team">Team</a></li>
+                <li><a href="#Technologies">Technologies</a></li>
+                <li><a href="#Contacts">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="banner" id="Home">
+            <div class="banner-item">
+                <h1>Practical-8</h1>
+            </div> 
+        </div>
+        <div class="box-title" id="Team">Team Members</div>
+        <div class="section-1">
+            <div id="team-member1"></div>
+            <div id="team-member2"></div>
+            <div id="team-member3"></div>
+            <div id="team-member4"></div>
+        </div> 
+        <div class="box-title" id="About us">About us</div>
+        <div class="section-2">
+            <div class="leftside">
+                <h1>About projects</h1>
+                <p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsam placeat blanditiis eius, minus, odit ab voluptate cum natus architecto, quae facere quidem similique! Voluptate aut assumenda odit impedit mollitia nulla quam officiis accusamus
+                    cum quisquam, eligendi veniam. Unde ipsam mollitia assumenda, vero fugiat aperiam ducimus? Dolorem minus distinctio temporibus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, laborum asperiores est consequatur excepturi
+                    voluptate autem similique eum. Qui eos aliquam molestiae iste quos illo similique commodi nobis tempore tenetur, aperiam non quasi iusto, voluptas nulla ratione asperiores voluptatem eveniet itaque nisi, voluptatibus consequatur suscipit
+                    quo. Ipsa ipsam repudiandae eos et quia mollitia, magnam quos dolorem alias non ullam nobis reprehenderit fuga! Similique sit aperiam eligendi,</p>
+            </div>
+            <div class="rightside">
+                <div id="column1">project-1</div>
+                <div id="column2">project-2</div>
+                <div id="column3">project-3</div>        
+                <div></div>
+            </div>
+        </div>
+        <div class="box-title" id="Technologies">Technologies</div> 
+        <div class="section-3">
+            <div class="box">
+                <img src="../images/hml.jpg" alt="html logo">
+                <h3>Introduction to HTML</h3> 
+                <p class="align">Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+                <br>
+                <a href="practical5-html5.html" target="blank">Read more</a>
+            </div>
+            <div class="box">
+                <img src="../images/css3.jpg" alt="css logo">
+                <h3>Introduction to CSS</h3>
+                <p class="align">Cascading Style Sheets (CSS) is a simple mechanism for adding style (e.g., fonts, colors, spacing) to Web documents. These pages contain information on how to learn and use CSS and on available software. They also contain news from CSS group.</p>
+                <br>
+                <a href="css3.html" target="blank" title="Interoduction to CSS">Read more</a>
+            </div>
+            <div class="box">
+                <img src="../images/js.jpg" alt="js logo">
+                <h3>Introduction to JavaScript</h3>
+                <p class="align">JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level and multi-paradigm.It has curly-bracket syntax and is prototype-based object-orientation, and first-class
+                    functions.</p> 
+                <br>
+                <a href="jsc.html" target="blank">Read more</a> 
+            </div>
+            <div class="box">
+                <img src="../images/bootstrap.png" alt="bootstrap logo">
+                <h3>Introduction to Bootstrap</h3> 
+                <p class="align">Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.</p>
+                <br>
+                <a href="boot.html" target="blank">Read more</a> 
+            </div>
+        </div>    
+            <div class="box-title" id="Contact">Contact</div>
+               <div class="footer">Copyright &copy; 2020 <br> Created by Sachi Tripathi<br>
+                   <a href="mailto:sachitripathi25@gmail.com">Send an Email </a>
+                </div>
+</body>
+
+</html>                     
