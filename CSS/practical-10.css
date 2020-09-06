@@ -113,8 +113,7 @@ a i {
     opacity: 1;
 }
 #chk:checked~.content {
-    width: 100%;
-    float: 200px;
+    width: 80%;
 }
 .social-icon {
     margin-top: 200px;
