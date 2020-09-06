@@ -114,6 +114,7 @@ a i {
 }
 #chk:checked~.content {
     width: 100%;
+    float: 200px;
 }
 .social-icon {
     margin-top: 200px;
